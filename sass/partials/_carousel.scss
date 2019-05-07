@@ -1,0 +1,110 @@
+section{
+    &.carousel{
+        div{
+            &.wrapper{
+                width: 100%;
+                font-size: 0;
+                text-align:center;
+                div{
+                    &.carousel_container{
+                        div{
+                            &.carousel_element{
+                                width:100%;
+                                margin: 0 auto;
+                                border-radius:.3em;
+                                display: none;
+                                position:relative;
+                                div{
+                                    &.img_div{
+                                        float: left;
+                                        @include background('../images/sea', 'png',470px ,562px , no-repeat); 
+                                    }
+                                }
+                                div{
+                                    &.content{
+                                        float: right;
+                                    }
+                                }
+                                @media screen and (max-width:1130px){
+                                    div{
+                                        &.img_div{
+                                            background:none;
+                                            width:0;
+                                            height: 0;
+                                        }
+                                    }
+                                    div{
+                                        &.content{
+                                            background:url("../images/sea.png") no-repeat;
+                                            float:none;
+                                            max-width: 960px;
+                                            display: block;
+                                            margin: 0 auto;
+                                            padding: 20px;
+                                            text-align: center;
+                                            h2{
+                                                font-size: 30px;
+                                            }
+                                            p{
+                                                font-size: 14px;
+                                            }
+                                        }
+                                    }
+                                }
+                                @media screen and (max-width:500px){
+                                    div{
+                                        &.content{
+                                            width: 280px;
+                                            padding: 20px 10px;
+                
+                                        }
+                                    }
+                                }
+                            } 
+                        }
+                    }
+                }
+                ul{
+                    margin: 100px 0 0;
+                    list-style-type:none;
+                    text-align:center;
+                    @media screen and (max-width: 375px){
+                        margin: 50px 0 0;
+                    }
+                    li{
+                        &.bullets{
+                            display:inline-block;
+                            text-align:center;
+                            vertical-align:top;
+                            cursor:pointer;
+                            margin-right: 25px;
+                            &:last-child{
+                                margin-right: 0;
+                            }
+                            &.selected{
+                                div{
+                                    &.circle{
+                                        background-color: $green;
+                                    }
+                                }
+                            }
+                            div{
+                                &.circle {
+                                    width:12px;
+                                    height:12px;
+                                    background-color :$mildgrey;
+                                    border-radius:50%;
+                                    position:relative;
+                                    text-align:center;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+                
+        }
+           
+    }
+}

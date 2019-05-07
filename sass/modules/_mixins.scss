@@ -1,0 +1,103 @@
+// background-image mixins
+@mixin background($image, $extension, $width, $height,  $repeat) {
+  background-image: url($image + '.' + $extension);
+  background-repeat: $repeat;
+  -webkit-background-size: $width $height;
+  -ms-background-size: $width $height;
+  -moz-background-size: $width $height;
+  -o-background-size: $width $height;
+  background-size: $width $height;
+       
+  @media 
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (   min--moz-device-pixel-ratio: 2),
+  screen and (   -moz-min-device-pixel-ratio: 2),
+  screen and (     -o-min-device-pixel-ratio: 2/1),
+  screen and (        min-device-pixel-ratio: 2),
+  screen and (             min-resolution: 192dpi), 
+  screen and (             min-resolution: 2dppx) {    
+     background-image: url($image + '@2x' + '.' + $extension);
+  }
+  @media 
+  screen and (-webkit-min-device-pixel-ratio: 3),
+  screen and (   min--moz-device-pixel-ratio: 3),
+  screen and (   -moz-min-device-pixel-ratio: 3),
+  screen and (     -o-min-device-pixel-ratio: 3/1),
+  screen and (        min-device-pixel-ratio: 3),
+  screen and (             min-resolution: 288dpi), 
+  screen and (             min-resolution: 3dppx) {    
+     background-image: url($image + '@3x' + '.' + $extension);
+  }
+}
+
+// border-radius
+@mixin border-radius($value){
+  border-radius: $value;
+  -webkit-border-radius: $value;
+  -ms-border-radius: $value;
+  -moz-border-radius: $value;
+  -o-border-radius: $value;
+}
+
+
+// text-shadow
+@mixin text-shadow($left ,$top, $radius ,$color){
+  text-shadow: $left $top $radius $color;
+  -webkit-text-shadow: $left $top $radius  $color;
+  -ms-text-shadow:$left $top $radius $color ;
+  -moz-text-shadow:$left $top $radius  $color ;
+  -o-text-shadow:$left $top $radius  $color ;
+}
+//  box-shadow
+@mixin box-shadow($left ,$top, $radius ,$color){
+  box-shadow: $left $top $radius $color;
+  -webkit-box-shadow: $left $top $radius  $color;
+  -ms-box-shadow:$left $top $radius $color ;
+  -moz-box-shadow:$left $top $radius  $color ;
+  -o-box-shadow:$left $top $radius  $color ;
+}
+
+// transition
+@mixin transition($prop ,$duration ,$ease){
+  transition: $prop $duration $ease;
+  -webkit-transition: $prop $duration $ease;
+  -ms-transition: $prop $duration $ease;
+  -moz-transition: $prop $duration $ease;
+  -o-transition:$prop $duration $ease;
+}
+
+// animation
+@mixin animation ($animation, $duration, $iteration) {
+  animation-iteration-count: $iteration;
+  animation-duration: $duration;
+  animation-name: $animation;
+
+  -webkit-animation-iteration-count: $iteration;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+
+  -moz-animation-itertaion-count: $iteration;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+ 
+  -o-animation-iteration-count: $iteration;
+  -o-animation-duration: $duration;
+  -o-animation-name: $animation;
+}
+
+@mixin keyframes ($slide){
+  @keyframes slide{
+    @content;
+  }
+  @-webkit-keyframes slide{
+   @content;
+  }
+
+  @-moz-keyframes slide{
+    @content;
+  }
+  @-o-keyframes slide{
+    @content;
+  }
+}
+

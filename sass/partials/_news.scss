@@ -1,0 +1,113 @@
+section{
+    &.news{
+        margin-top: 163px;
+        text-align: center;
+        @media screen and (max-width: 500px){
+            margin-top: 100px ;
+        }
+        @media screen and (max-width: 375px){
+            margin-top: 70px ;
+        }
+        div{
+            h2{
+                font-size: 50px;
+                font-weight: 600;
+                text-align: left;
+            }
+            button{
+                width: 160px;
+                height: 75px;
+            }
+            ul{
+                list-style-type: none;
+                font-size: 0;
+                margin: 65px 0 130px;
+                text-align: left;
+                li{
+                    display: inline-block;
+                    max-width: 470px;
+                    margin-right: 226px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    img{
+                        width: 470px; 
+                        margin-bottom: 54px;
+                    }
+                    h6{
+                        font-size: 14px;
+                        color: $dark;
+                        font-weight: 600;
+                        margin-bottom:55px;
+                    }
+                    h2{
+                        line-height: 1.02;
+                        font-weight: bold;
+                        margin-bottom: 26px;
+                    }
+                    span{
+                        color: $lightgrey;
+                        font-size: 14px;
+                        font-weight: 600;
+                        margin-bottom: 33px;
+                        display: inline-block;
+                    }
+                    p{
+                        color: $lightgrey;
+                        font-size: 22px;
+                        line-height: 1.55;
+                        margin-bottom: 50px;
+                    }
+                    a{
+                        color: $green;
+                        font-size: 14px;
+                        font-weight: bold;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 1350px){
+            div{
+                h2{
+                    text-align: center;
+                    font-size: 30px;
+                }
+                ul{
+                    text-align: center;
+                    li{
+                        display: block;
+                        margin: 0 auto;
+                        &:last-child{
+                            margin: 0 auto;
+                            margin-top: 70px;
+                        }
+                        h6{
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width:500px){
+            div{
+                button{
+                    width: 100px;
+                }
+                ul{
+                    margin: 50px 0 80px;
+                    li{
+                        img{
+                            width: 250px;
+                        }
+                        p{
+                            font-size: 14px;
+                            padding: 0 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

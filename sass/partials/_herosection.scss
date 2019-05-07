@@ -1,0 +1,291 @@
+section{
+    &.hero_section{
+        @include background('../images/background', 'jpg',0 ,0 , no-repeat); 
+        background-size: cover;
+        background-position: right;
+        height: 1095px;
+        @media screen and (max-width: 960px){
+            background-image: linear-gradient(to right,$lightblue, $bluish); 
+        }
+        div{
+            &.herosection_wrapper{
+                padding: 333px 0 95px;
+                div{
+                    &.herosection_container{
+                        color: $white;
+                        margin-bottom: 214px;
+                        h1{
+                            font-size: 80px;
+                            max-width: 894px;
+                            margin-bottom: 34px;
+                            @include text-shadow(2px , 2px , 10px , #425154 );
+                        }
+                        h4{
+                            display: inline-block;
+                            font-size: 22px;
+                            padding-bottom: 8px;
+                            border-bottom: 1px solid $white;
+                            margin-bottom: 44px;
+                            text-transform: uppercase;
+                            @include text-shadow(2px , 2px , 10px , #425154 );
+                            &:last-child{
+                                border-bottom: none; 
+                                margin-bottom: 0;
+                                padding-bottom: 0;
+                            }
+                        }
+                        a{
+                            display: inline-block;
+                            text-decoration: none;
+                            color: $white;
+                            margin-right: 16px;
+                            font-size: 38px; 
+                            @include text-shadow(2px , 2px , 10px , #425154 );   
+                        }
+                    }
+
+                }
+                div{
+                    &.donate_div{
+                        display: inline-block;
+                        background-color: $white;
+                        font-size:0;
+                        max-width: 1280px;
+                        padding: 0 10px;
+                        text-align: center;
+                        @include border-radius(4px);
+                            div{
+                                &.div_container{
+                                    display: inline-block;
+                                    margin: 37px 40px;
+                                    font-size: 22px;
+                                    color: $dark;
+                                    font-weight: 600; 
+                                }
+                            }   
+                            div{
+                                &.timeperiod_container{
+                                    padding: 24px 90px 44px;
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    position: relative;
+                                  
+                                    h6{
+                                        display: block;
+                                        &:after{
+                                            content: "\f0de";
+                                            font-family: "Font Awesome 5 Free" !important;
+                                            font-weight: 600;
+                                            float: right;
+                                            margin-top: 4px;
+                                            cursor: pointer;
+                                            margin-left: 10px;
+                                        }
+                                    }
+                                    p{
+                                        display: inline-block;
+                                        margin-top: 8px;
+                                    }
+                                }
+                            }
+                            p{
+                                font-size: 22px;
+                                color: $dark;
+                                font-weight: 600; 
+                                display: inline-block;
+                            }
+                            h6{
+                                color: $mildgrey;
+                                font-size: 14px;
+                            }
+                            button{
+                                width: 300px;
+                                height: 100px;;
+                                font-size: 22px;
+                                font-weight: 600;
+                                float: right;
+                                margin: 10px 0;
+                            }
+                            
+                        
+                        div{
+                            &.amount_div{
+                                padding: 24px 10px 42px;
+                                width: 270px;
+                                height: 120px;
+                                display: inline-block;
+                                border-right: 1px solid $mildgrey;
+                                border-left: 1px solid $mildgrey;
+                                position: relative;
+                                p{
+                                    margin-top: 8px;
+                                    text-align: center;
+                                }
+                                h6{
+                                    &:after{
+                                        content: "\f0de";
+                                        font-family: "Font Awesome 5 Free" !important;
+                                        font-weight: 600;
+                                        float: right;
+                                        margin-top: 4px;
+                                        cursor: pointer;
+                                        margin-left: 10px;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            } 
+        }
+        @media screen and (max-width:1350px){
+            div{
+                &.herosection_wrapper{
+                    div{
+                        &.donate_div{
+                            max-width: 960px;
+                            div{
+                                &.div_container{
+                                    margin:0;
+                                }
+                            }
+                            div{
+                                &.timeperiod_container{
+                                    padding: 24px;
+                                }
+                            }
+                            
+                            button{
+                                &.btn{
+                                    width: 120px;
+                                    float: none;
+                                    font-size: 14px;
+                                    height: 70px;
+                                }
+                            }
+                        }
+                    }
+                }
+               
+            }
+        }
+        @media screen and (max-width:1000px){
+            div{
+                &.herosection_wrapper{
+                    text-align: center;
+                    div{
+                        &.herosection_container{
+                            h1{
+                                font-size: 50px;
+                            }
+                        }
+                    }
+                    div{
+                        &.donate_div{
+                            max-width: 600px;
+                            div{
+                                &.div_container{
+                                    font-size: 16px;
+                                }
+                            }
+                            div{
+                                &.amount_div{
+                                    width: 100px;
+                                    padding: 24px 5px;;
+                                    height: 100px;
+                                }
+                            }
+                            p{
+                                font-size: 14px;
+                            }
+                            button{
+                                &.btn{
+                                    margin:0;
+                                }
+                             
+                            }
+                        
+                        }
+                    }
+                    
+                }
+            }
+        }
+        @media screen and (max-width:600px){
+            height: 900px;
+            div{
+                &.herosection_wrapper{
+                    padding:150px 0 70px;
+                    div{
+                        &.herosection_container{
+                            margin-bottom:80px;
+                            h1{
+                                font-size: 30px;
+                                padding: 0 20px;
+                            }
+                        }
+                    }
+                    div{
+                        &.donate_div{
+                            padding: 20px 0;
+                            max-width: 280px;
+                            div{
+                                &.div_container{
+                                    display: block;
+                                    padding: 10px ;
+                                }
+                            }
+                            div{
+                                &.amount_div{
+                                    display: block;
+                                    border-top: 1px solid $mildgrey;
+                                    border-bottom: 1px solid $mildgrey;
+                                    width: 100%;
+                                    padding: 24px;
+                                }
+                            }
+                            div{
+                                &.timeperiod_container{
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 400px){
+            div{
+                &.herosection_wrapper{
+                    div{
+                        &.herosection_container{
+                            margin-bottom: 60px;
+                            a{
+                                
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 325px){
+            div{
+                &.herosection_wrapper{
+                    div{
+                        &.herosection_container{
+                            margin-bottom: 40px;
+                            h4{
+                                font-size: 16px;
+                            }
+                            a{
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

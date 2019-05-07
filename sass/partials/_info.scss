@@ -1,0 +1,130 @@
+section{
+    &.info{
+        margin-bottom: 250px;
+        @media screen and (max-width: 500px){
+            margin-bottom: 100px ;
+        }
+        @media screen and (max-width: 375px){
+            margin-bottom: 70px ;
+        }
+        div{
+            font-size: 0;
+            div{
+                &.info_container{
+                    float: left;
+                    max-width: 690px;
+                    h2{
+                        color: $dark;
+                        font-size: 50px;
+                        max-width: 470px;
+                        margin-bottom: 42px;
+                    }
+                    &>p{
+                        color: $lightgrey;
+                        font-size: 22px;
+                        line-height: 1.55;
+                        max-width: 470px;
+                        margin-bottom: 30px;
+                    }
+                    ul{
+                        list-style-type: none;
+                        font-size: 0;
+                        li{
+                            display: inline-block;
+                            vertical-align: top;
+                            width: 230px;
+                            span{
+                                font-size: 80px;
+                                color: $green;
+                            }
+                            p{
+                                font-size: 14px; 
+                                font-weight: bold;
+                                color: $dark;
+                                text-transform: uppercase;
+                               
+                            }
+                        }
+                    }
+                }
+            }
+            div{
+                &.hatchlings_saved{
+                    float: right;
+                    border: 4px solid $green;
+                    width: 370px;
+                    padding: 105px 70px;
+                    margin-top: 80px;
+                    span{
+                        display: inline-block;
+                        font-size: 80px;
+                        color: $green;
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        font-size: 22px; 
+                        font-weight: bold;
+                        color: $dark;
+                        text-transform: uppercase;
+                        width: 215px;
+                    }
+                }
+            }
+            @media screen and (max-width: 1136px){
+                div{
+                    &.info_container{
+                        display: block;
+                        float: none;
+                        margin: 0 auto;
+                        text-align: center;
+                        &>p{
+                            margin: 0 auto;
+                        }
+                        h2{
+                            margin: 0 auto;
+                        }
+                        ul{
+                            text-align: center;
+                            margin-top: 40px;
+                        }
+                    }
+                }
+                div{
+                    &.hatchlings_saved{
+                        display: block;
+                        float: none;
+                        margin: 0 auto;
+                        margin-top: 70px;
+                    }
+                }
+            }
+            @media screen and (max-width: 500px){
+                div{
+                    &.info_container{
+                        &>p{
+                            font-size: 14px;
+                        }
+                        h2{
+                            font-size: 30px;
+                            margin-bottom: 40px;
+                        }
+                        ul{
+                            li{
+                                span{
+                                    font-size: 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+                div{
+                    &.hatchlings_saved{
+                        max-width:280px;
+                        padding: 80px 50px;
+
+                    }
+                }
+            }
+        }  
+    }
+}
