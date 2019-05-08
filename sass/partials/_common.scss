@@ -54,6 +54,8 @@
         text-transform: uppercase;
         font-weight: bold;
         &:hover{
+            color: $sea_blue;
+            @include transition(color, 0.3s, linear);
             span{
                 &.cta{
                     @include transition(all,0.2s ,linear );
@@ -84,6 +86,7 @@ ul{
         position: absolute;
         top:50%; 
         left: 60%;
+        z-index: 2;
         font-size: 14px;
         font-weight: 600;
         color: $dark;

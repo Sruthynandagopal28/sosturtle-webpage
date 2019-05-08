@@ -64,6 +64,10 @@ section{
                         font-weight: bold;
                         text-decoration: none;
                         text-transform: uppercase;
+                        @include transition(color, 0.3s, linear);
+                        &:hover{
+                            color: $sea_blue;
+                        }
                     }
                 }
             }
@@ -94,16 +98,19 @@ section{
             div{
                 button{
                     width: 100px;
+                    height: 40px;
                 }
                 ul{
-                    margin: 50px 0 80px;
+                    margin: 50px 0 ;
                     li{
                         img{
                             width: 250px;
+                            margin-bottom: 25px;
                         }
                         p{
                             font-size: 14px;
                             padding: 0 20px;
+                            margin-bottom: 20px;
                         }
                     }
                 }

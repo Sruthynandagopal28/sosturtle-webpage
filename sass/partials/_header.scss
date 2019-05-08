@@ -45,13 +45,18 @@ header{
     }
     &.nav_open{
         background-color: $sea-blue;
+        span{
+            &:before{
+                content: "";
+            }
+        }
         nav{
             margin: 50px;
             display: block;
             text-align: center;
             a{
                 display: block;
-                margin: 10px;
+                margin: 25px 10px;
             }
         }
         div{
@@ -82,11 +87,12 @@ header{
     }
     &.bg-change{
         background-color: $sea-blue;
-        padding: 28px 40px;
+        padding: 20px 40px;
     }
     @media screen and (max-width: 1000px){
         .menu_bar{
             display: inline-block;
+            
         }
         nav{
             display: none;
@@ -97,7 +103,7 @@ header{
     }
    
     @media screen and (max-width: 350px){
-        padding: 20px 30px;
+        padding: 20px ;
     }
     
 }

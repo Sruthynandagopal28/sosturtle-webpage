@@ -5,15 +5,21 @@ section{
                 width: 100%;
                 font-size: 0;
                 text-align:center;
+                overflow: hidden;
                 div{
                     &.carousel_container{
+                        display: flex;
+                        flex-wrap: nowrap;
+                        width: 100%;
+                        @include transition(transform, 0.5s, linear);
                         div{
                             &.carousel_element{
-                                width:100%;
+                                // width:100%;
                                 margin: 0 auto;
-                                border-radius:.3em;
-                                display: none;
+                                // display: none;
                                 position:relative;
+                                flex-basis: 100%;
+                                flex-shrink: 0;
                                 div{
                                     &.img_div{
                                         float: left;
@@ -93,7 +99,7 @@ section{
                                     width:12px;
                                     height:12px;
                                     background-color :$mildgrey;
-                                    border-radius:50%;
+                                    @include border-radius(50%);
                                     position:relative;
                                     text-align:center;
                                 }
