@@ -1,12 +1,15 @@
 footer{
     padding: 144px 100px 75px;
-    background-color: $white;
     font-size: 14px;
     background-color: $greenish_blue;
     margin-top: 144px;
     @media screen and (max-width: 500px){
         padding: 80px 80px 60px;
         margin-top: 50px;
+    }
+    @media screen and (max-width: 500px){
+        padding: 50px 20px ;
+       
     }
     div{
         &.newsletter_wrapper{
@@ -23,6 +26,9 @@ footer{
                 @media screen and (max-width: 710px){
                     font-size: 14px;
                 }
+                @media screen and (max-width: 325px){
+                   margin-bottom: 50px;
+                }
                 span{
                     color: $green;
                     font-weight: bold;
@@ -33,11 +39,17 @@ footer{
                 width: 100%;
                 border: 1px solid $lightgrey;
                 background-color: $white;
-                border-radius: 4px;
+                @include border-radius(4px);
                 height: 75px;
                 font-size: 0;
                 @media screen and (max-width: 500px){
                    height: 50px;
+                }
+                @media screen and (max-width: 325px){
+                    border: none;
+                    background-color: transparent;
+                    height: auto;
+                    text-align: center;
                 }
                 input{
                     display: inline-block;
@@ -59,6 +71,11 @@ footer{
                     @media screen and (max-width: 500px){
                         width: calc( 100% - 70px);
                     }
+                    @media screen and (max-width: 325px){
+                        width: 100%;
+                        border: 1px solid $lightgrey;
+                        @include border-radius(4px);
+                    }
                 }
                 button{
                     display: inline-block;
@@ -73,6 +90,10 @@ footer{
                         width:70px;
                         height: 40px;
                         font-size: 12px;                    
+                    }
+                    @media screen and (max-width: 325px){
+                        margin-top: 15px;
+                        width: 100%;
                     }
                 }
             } 

@@ -4,12 +4,30 @@ section{
         background-size: cover;
         background-position: right;
         height: 1095px;
+        position: relative;
         @media screen and (max-width: 960px){
             background-image: linear-gradient(to right,$lightblue, $bluish); 
         }
         div{
+            &.video_section{
+                position: absolute;
+                top:0;
+                left:0;
+                z-index: 1;
+                width: 100vw;
+                height: 100%;
+                video{
+                    object-fit: cover;
+                    width: 100vw;
+                    height: inherit;
+                }
+            }
+        }
+        div{
             &.herosection_wrapper{
                 padding: 333px 0 95px;
+                position: relative;
+                z-index: 2;
                 div{
                     &.herosection_container{
                         color: $white;
@@ -65,11 +83,11 @@ section{
                             }   
                             div{
                                 &.timeperiod_container{
-                                    padding: 24px 90px 44px;
+                                    padding: 24px 20px 44px;
                                     display: inline-block;
                                     vertical-align: top;
                                     position: relative;
-                                  
+                                    width: 200px;
                                     h6{
                                         display: block;
                                         &:after{
@@ -150,11 +168,6 @@ section{
                                     margin:0;
                                 }
                             }
-                            div{
-                                &.timeperiod_container{
-                                    padding: 24px;
-                                }
-                            }
                             
                             button{
                                 &.btn{
@@ -162,6 +175,8 @@ section{
                                     float: none;
                                     font-size: 14px;
                                     height: 70px;
+                                    vertical-align: top;
+                                    margin: 23px 0 0 ;
                                 }
                             }
                         }
@@ -187,6 +202,8 @@ section{
                             div{
                                 &.div_container{
                                     font-size: 16px;
+                                    vertical-align: top;
+                                    margin-top:40px;
                                 }
                             }
                             div{
@@ -196,12 +213,18 @@ section{
                                     height: 100px;
                                 }
                             }
+                            div{
+                                &.timeperiod_container{
+                                    width: 100px;
+                                    padding: 24px 10px;
+                                }
+                            }
                             p{
                                 font-size: 14px;
                             }
                             button{
                                 &.btn{
-                                    margin:0;
+                                    margin:15px 0 0;
                                 }
                              
                             }
@@ -234,6 +257,7 @@ section{
                                 &.div_container{
                                     display: block;
                                     padding: 10px ;
+                                    margin-top:0;
                                 }
                             }
                             div{
@@ -243,11 +267,29 @@ section{
                                     border-bottom: 1px solid $mildgrey;
                                     width: 100%;
                                     padding: 24px;
+                                    text-align: left;
+                                    p{
+                                        display: block;
+                                        text-align: left;
+                                    }
                                 }
                             }
                             div{
                                 &.timeperiod_container{
                                     display: block;
+                                    width: 100%;
+                                    padding: 24px;
+                                    text-align: left;
+                                    p{
+                                        display: block;
+                                        text-align: left;
+                                    }
+                                }
+                            }
+                            button{
+                                &.btn{
+                                    width: 80%;
+                                    margin: 0 20px;
                                 }
                             }
                         }
@@ -255,15 +297,15 @@ section{
                 }
             }
         }
-        @media screen and (max-width: 400px){
+        @media screen and (max-width: 500px){
             div{
                 &.herosection_wrapper{
                     div{
                         &.herosection_container{
                             margin-bottom: 60px;
                             a{
-                                
-                                margin-bottom: 10px;
+                                margin-bottom: 15px;
+                                margin-right: 0;
                             }
                         }
                     }
