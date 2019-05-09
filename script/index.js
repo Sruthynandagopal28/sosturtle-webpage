@@ -16,6 +16,7 @@ $(document).ready(function(){
 			$('.carousel_container').css('transform','translateX(-' + slideValue + '%)');
 		}
 		$('.bullets').on('click', carouselSlider);
+
 		
 	// header background change
     $(window).scroll(function(){
@@ -55,10 +56,42 @@ $(document).ready(function(){
 				$(this).parent('ul').slideUp();
 		});
 
+
 	// video
-	$(".play").click(function(){
-		$(".hero_section").css("background","none");
-		$('video').attr("src","videos/video.mov");
+		$(".play").click(function(){
+			$(".hero_section").css("background","none");
+			$('video').attr("src","videos/video.mov");
+		});
+
+
+	// for text animation
+	var i = 0;
+	var txt = 'HOW WE USE YOUR DONATION';
+	function typeWriter() {
+		if (i < txt.length) {
+			var animate = $("#text_animate");
+			animate.text(animate.text()+txt.charAt(i++));
+			setTimeout(typeWriter, 150);
+		}
+	}
+	typeWriter();
+
+
+	// for getting the border for the selected nav menu
+	function activeBorder(){
+		var activeBorder = $(".active_border");
+		var  activeAnchorWidth = $("nav a.active").outerWidth();
+		var activeAnchorPosition = $("nav a.active").position().left;
+		activeBorder.css({"transform": "translateX("+activeAnchorPosition+"px)" , "width" : activeAnchorWidth});
+	}
+	activeBorder();
+
+	$("nav a").click(function() {
+			var left = $(this).position().left;
+			var width = $(this).outerWidth();
+			var activeBorder = $(".active_border");
+			$(this).addClass('active').siblings().removeClass('active');
+			activeBorder.css({"transform": "translateX("+left+"px)" , "width" : width});
 	});
 
 });

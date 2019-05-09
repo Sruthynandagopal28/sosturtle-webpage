@@ -8,7 +8,7 @@ header{
     padding: 38px 50px;
     font-size: 0;
     text-align: center; 
-    @include transition(color,0.3s ,linear );
+    @include transition(background-color 0.3s linear , padding 0.3s linear );
     .menu_bar{
         display: none;
         float: right;
@@ -28,43 +28,37 @@ header{
         display: inline-block;
         font-size: 0;
         margin: 10px 0;
+        position: relative;
+        .active_border{
+            position: absolute;
+            bottom: -8px;
+            left:0;
+            height: 2px;
+            background-color: $white;
+            @include border-radius(4px);
+            @include transition(transform 0.4s linear);
+        }
         a{
             display: inline-block;
             font-size: 14px;
             color: $white;
             text-decoration: none;
             margin-right: 44px ;
-            @include transition(all,0.3s ,linear );
+            @include transition(all 0.3s linear );
             &:last-child{
                 margin-right: 0;
             }
             &:hover{
                 color: $black;
             }
-        }
-    }
-    &.nav_open{
-        background-color: $sea-blue;
-        span{
-            &:before{
-                content: "";
+            &.active{
+                &:hover{
+                    color: $white;
+                }
             }
         }
-        nav{
-            margin: 50px;
-            display: block;
-            text-align: center;
-            a{
-                display: block;
-                margin: 25px 10px;
-            }
-        }
-        div{
-            display: block;
-            float: none;
-        }
-       
     }
+    
     div{
         float: right;
         margin: 10px 0 0;
@@ -96,9 +90,34 @@ header{
         }
         nav{
             display: none;
+            .active_border{
+                display: none;
+            }
         }
         div{
             display: none;
+        }
+        &.nav_open{
+            background-color: $sea-blue;
+            span{
+                &:before{
+                    content: "";
+                }
+            }
+            nav{
+                margin: 50px;
+                display: block;
+                text-align: center;
+                a{
+                    display: block;
+                    margin: 25px 10px;
+                }
+            }
+            div{
+                display: block;
+                float: none;
+            }
+           
         }
     }
    

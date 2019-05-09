@@ -122,7 +122,7 @@ footer{
                     margin-right: 44px;
                     color: $lightgrey;
                     font-size: 18px;
-                    @include transition(all,0.3s ,linear );
+                    @include transition(all 0.3s linear );
                     &:hover{
                         color: $blue;
                     }
