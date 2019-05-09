@@ -64,7 +64,7 @@ section{
                         font-weight: bold;
                         text-decoration: none;
                         text-transform: uppercase;
-                        @include transition(color, 0.3s, linear);
+                        @include transition(color  0.3s linear);
                         &:hover{
                             color: $sea_blue;
                         }

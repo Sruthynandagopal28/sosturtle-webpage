@@ -79,11 +79,11 @@ header {
   padding: 38px 50px;
   font-size: 0;
   text-align: center;
-  transition: color 0.3s linear;
-  -webkit-transition: color 0.3s linear;
-  -ms-transition: color 0.3s linear;
-  -moz-transition: color 0.3s linear;
-  -o-transition: color 0.3s linear;
+  transition: background-color 0.3s linear, padding 0.3s linear;
+  -webkit-transition: background-color 0.3s linear, padding 0.3s linear;
+  -ms-transition: background-color 0.3s linear, padding 0.3s linear;
+  -moz-transition: background-color 0.3s linear, padding 0.3s linear;
+  -o-transition: background-color 0.3s linear, padding 0.3s linear;
 }
 header .menu_bar {
   display: none;
@@ -120,6 +120,24 @@ header nav {
   display: inline-block;
   font-size: 0;
   margin: 10px 0;
+  position: relative;
+}
+header nav .active_border {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  transition: transform 0.4s linear;
+  -webkit-transition: transform 0.4s linear;
+  -ms-transition: transform 0.4s linear;
+  -moz-transition: transform 0.4s linear;
+  -o-transition: transform 0.4s linear;
 }
 header nav a {
   display: inline-block;
@@ -139,24 +157,8 @@ header nav a:last-child {
 header nav a:hover {
   color: #000;
 }
-header.nav_open {
-  background-color: #019cc1;
-}
-header.nav_open span:before {
-  content: "";
-}
-header.nav_open nav {
-  margin: 50px;
-  display: block;
-  text-align: center;
-}
-header.nav_open nav a {
-  display: block;
-  margin: 25px 10px;
-}
-header.nav_open div {
-  display: block;
-  float: none;
+header nav a.active:hover {
+  color: #fff;
 }
 header div {
   float: right;
@@ -188,8 +190,30 @@ header.bg-change {
   header nav {
     display: none;
   }
+  header nav .active_border {
+    display: none;
+  }
   header div {
     display: none;
+  }
+  header.nav_open {
+    background-color: #019cc1;
+  }
+  header.nav_open span:before {
+    content: "";
+  }
+  header.nav_open nav {
+    margin: 50px;
+    display: block;
+    text-align: center;
+  }
+  header.nav_open nav a {
+    display: block;
+    margin: 25px 10px;
+  }
+  header.nav_open div {
+    display: block;
+    float: none;
   }
 }
 @media screen and (max-width: 350px) {
@@ -287,6 +311,18 @@ section.hero_section div.herosection_wrapper div.herosection_container a {
   -ms-text-shadow: 2px 2px 10px #425154;
   -moz-text-shadow: 2px 2px 10px #425154;
   -o-text-shadow: 2px 2px 10px #425154;
+  transition: text-shadow 0.3s linear;
+  -webkit-transition: text-shadow 0.3s linear;
+  -ms-transition: text-shadow 0.3s linear;
+  -moz-transition: text-shadow 0.3s linear;
+  -o-transition: text-shadow 0.3s linear;
+}
+section.hero_section div.herosection_wrapper div.herosection_container a:hover {
+  text-shadow: 2px 2px 10px #000;
+  -webkit-text-shadow: 2px 2px 10px #000;
+  -ms-text-shadow: 2px 2px 10px #000;
+  -moz-text-shadow: 2px 2px 10px #000;
+  -o-text-shadow: 2px 2px 10px #000;
 }
 section.hero_section div.herosection_wrapper div.donate_div {
   display: inline-block;
@@ -468,7 +504,7 @@ section.hero_section div.herosection_wrapper div.donate_div div.amount_div h6:af
     margin: 0 20px;
   }
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 500px) {
   section.hero_section div.herosection_wrapper div.herosection_container {
     margin-bottom: 60px;
   }
@@ -506,11 +542,11 @@ section.hero_section div.herosection_wrapper div.donate_div div.amount_div h6:af
   -ms-border-radius: 4px;
   -moz-border-radius: 4px;
   -o-border-radius: 4px;
-  transition: background-color 0.3s linear;
-  -webkit-transition: background-color 0.3s linear;
-  -ms-transition: background-color 0.3s linear;
-  -moz-transition: background-color 0.3s linear;
-  -o-transition: background-color 0.3s linear;
+  transition: background-color, 0.3s, linear;
+  -webkit-transition: background-color, 0.3s, linear;
+  -ms-transition: background-color, 0.3s, linear;
+  -moz-transition: background-color, 0.3s, linear;
+  -o-transition: background-color, 0.3s, linear;
 }
 .btn:hover {
   background-color: #fff;
@@ -554,18 +590,18 @@ section.hero_section div.herosection_wrapper div.donate_div div.amount_div h6:af
 }
 .content a:hover {
   color: #019cc1;
-  transition: color 0.3s linear;
-  -webkit-transition: color 0.3s linear;
-  -ms-transition: color 0.3s linear;
-  -moz-transition: color 0.3s linear;
-  -o-transition: color 0.3s linear;
+  transition: color, 0.3s, linear;
+  -webkit-transition: color, 0.3s, linear;
+  -ms-transition: color, 0.3s, linear;
+  -moz-transition: color, 0.3s, linear;
+  -o-transition: color, 0.3s, linear;
 }
 .content a:hover span.cta {
-  transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
+  transition: all, 0.2s, linear;
+  -webkit-transition: all, 0.2s, linear;
+  -ms-transition: all, 0.2s, linear;
+  -moz-transition: all, 0.2s, linear;
+  -o-transition: all, 0.2s, linear;
   animation-iteration-count: infinite;
   animation-duration: 0.8s;
   animation-name: slide;
@@ -626,8 +662,9 @@ ul.dropdown_list {
   display: none;
   list-style-type: none;
   position: absolute;
-  top: 50%;
-  left: 60%;
+  width: 100%;
+  top: 100%;
+  left: 0;
   z-index: 2;
   font-size: 14px;
   font-weight: 600;
