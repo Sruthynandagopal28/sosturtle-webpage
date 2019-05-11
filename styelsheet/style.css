@@ -133,11 +133,11 @@ header nav .active_border {
   -ms-border-radius: 4px;
   -moz-border-radius: 4px;
   -o-border-radius: 4px;
-  transition: transform 0.4s linear;
-  -webkit-transition: transform 0.4s linear;
-  -ms-transition: transform 0.4s linear;
-  -moz-transition: transform 0.4s linear;
-  -o-transition: transform 0.4s linear;
+  transition: transform 0.4s linear, width 0.4s linear;
+  -webkit-transition: transform 0.4s linear, width 0.4s linear;
+  -ms-transition: transform 0.4s linear, width 0.4s linear;
+  -moz-transition: transform 0.4s linear, width 0.4s linear;
+  -o-transition: transform 0.4s linear, width 0.4s linear;
 }
 header nav a {
   display: inline-block;
@@ -180,7 +180,7 @@ header div a:hover {
   color: #000;
 }
 header.bg-change {
-  background-color: #019cc1;
+  background-color: #23cf5f;
   padding: 20px 40px;
 }
 @media screen and (max-width: 1000px) {
@@ -197,7 +197,7 @@ header.bg-change {
     display: none;
   }
   header.nav_open {
-    background-color: #019cc1;
+    background-color: #23cf5f;
   }
   header.nav_open span:before {
     content: "";
@@ -210,6 +210,9 @@ header.bg-change {
   header.nav_open nav a {
     display: block;
     margin: 25px 10px;
+  }
+  header.nav_open nav a.active:hover {
+    color: #000;
   }
   header.nav_open div {
     display: block;
@@ -225,12 +228,11 @@ header.bg-change {
 section.hero_section {
   background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
-  -webkit-background-size: 0 0;
-  -ms-background-size: 0 0;
-  -moz-background-size: 0 0;
-  -o-background-size: 0 0;
-  background-size: 0 0;
-  background-size: cover;
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
   background-position: right;
   height: 1095px;
   position: relative;
@@ -323,6 +325,12 @@ section.hero_section div.herosection_wrapper div.herosection_container a:hover {
   -ms-text-shadow: 2px 2px 10px #000;
   -moz-text-shadow: 2px 2px 10px #000;
   -o-text-shadow: 2px 2px 10px #000;
+}
+section.hero_section div.herosection_wrapper div.herosection_container a.pause::before {
+  content: "";
+}
+section.hero_section div.herosection_wrapper div.herosection_container a.play::before {
+  content: "";
 }
 section.hero_section div.herosection_wrapper div.donate_div {
   display: inline-block;
@@ -542,11 +550,11 @@ section.hero_section div.herosection_wrapper div.donate_div div.amount_div h6:af
   -ms-border-radius: 4px;
   -moz-border-radius: 4px;
   -o-border-radius: 4px;
-  transition: background-color, 0.3s, linear;
-  -webkit-transition: background-color, 0.3s, linear;
-  -ms-transition: background-color, 0.3s, linear;
-  -moz-transition: background-color, 0.3s, linear;
-  -o-transition: background-color, 0.3s, linear;
+  transition: background-color 0.3s linear, color 0.3s linear;
+  -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+  -ms-transition: background-color 0.3s linear, color 0.3s linear;
+  -moz-transition: background-color 0.3s linear, color 0.3s linear;
+  -o-transition: background-color 0.3s linear, color 0.3s linear;
 }
 .btn:hover {
   background-color: #fff;
@@ -587,21 +595,21 @@ section.hero_section div.herosection_wrapper div.donate_div div.amount_div h6:af
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
+  transition: color 0.3s linear;
+  -webkit-transition: color 0.3s linear;
+  -ms-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
 }
 .content a:hover {
   color: #019cc1;
-  transition: color, 0.3s, linear;
-  -webkit-transition: color, 0.3s, linear;
-  -ms-transition: color, 0.3s, linear;
-  -moz-transition: color, 0.3s, linear;
-  -o-transition: color, 0.3s, linear;
 }
 .content a:hover span.cta {
-  transition: all, 0.2s, linear;
-  -webkit-transition: all, 0.2s, linear;
-  -ms-transition: all, 0.2s, linear;
-  -moz-transition: all, 0.2s, linear;
-  -o-transition: all, 0.2s, linear;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   animation-iteration-count: infinite;
   animation-duration: 0.8s;
   animation-name: slide;
@@ -997,6 +1005,7 @@ section.carousel div.wrapper div.carousel_container div.carousel_element div.con
   }
   section.carousel div.wrapper div.carousel_container div.carousel_element div.content h2 {
     font-size: 30px;
+    display: block;
   }
   section.carousel div.wrapper div.carousel_container div.carousel_element div.content p {
     font-size: 14px;
@@ -1294,6 +1303,11 @@ footer div.newsletter_wrapper div button {
     width: 100%;
   }
 }
+@media screen and (max-width: 770px) {
+  footer div.footer_container {
+    text-align: center;
+  }
+}
 footer div.footer_container span {
   color: #61788e;
   font-weight: bold;
@@ -1301,11 +1315,6 @@ footer div.footer_container span {
 footer div.footer_container p {
   color: #9aa8b6;
   display: inline-block;
-}
-@media screen and (max-width: 770px) {
-  footer div.footer_container p {
-    text-align: center;
-  }
 }
 footer div.footer_container div {
   float: right;

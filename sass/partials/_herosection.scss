@@ -1,7 +1,6 @@
 section{
     &.hero_section{
-        @include background('../images/background', 'jpg',0 ,0 , no-repeat); 
-        background-size: cover;
+        @include background('../images/background', 'jpg',100% ,100% , no-repeat); 
         background-position: right;
         height: 1095px;
         position: relative;
@@ -62,6 +61,16 @@ section{
                             @include transition (text-shadow 0.3s linear); 
                             &:hover{
                                 @include text-shadow(2px , 2px , 10px , $black );
+                            }
+                            &.pause{
+                                &::before{
+                                    content: "\f28b";
+                                }
+                            }
+                            &.play{
+                                &::before{
+                                    content: "\f144";
+                                }
                             }
                         }
                     }
