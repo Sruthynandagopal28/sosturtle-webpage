@@ -36,7 +36,7 @@ header{
             height: 2px;
             background-color: $white;
             @include border-radius(4px);
-            @include transition(transform 0.4s linear);
+            @include transition(transform 0.4s linear, width 0.4s linear);
         }
         a{
             display: inline-block;
@@ -80,7 +80,7 @@ header{
         }
     }
     &.bg-change{
-        background-color: $sea-blue;
+        background-color: $green;
         padding: 20px 40px;
     }
     @media screen and (max-width: 1000px){
@@ -98,7 +98,7 @@ header{
             display: none;
         }
         &.nav_open{
-            background-color: $sea-blue;
+            background-color: $green;
             span{
                 &:before{
                     content: "";
@@ -111,6 +111,11 @@ header{
                 a{
                     display: block;
                     margin: 25px 10px;
+                    &.active{
+                        &:hover{
+                            color: $black;
+                        }
+                    }
                 }
             }
             div{

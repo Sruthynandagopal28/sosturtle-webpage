@@ -103,6 +103,9 @@ footer{
     
     div{
         &.footer_container{
+            @media screen and (max-width: 770px){
+                text-align: center;
+            }
             span{
                 color: $blueygrey;
                 font-weight: bold;
@@ -110,9 +113,6 @@ footer{
             p{
                 color: $lightgrey;
                 display: inline-block;
-                @media screen and (max-width: 770px){
-                    text-align: center;
-                }
             }
             div{
                 float: right;
